@@ -67,8 +67,23 @@ Rousseau, R. (2011). Statistical contribution to the analysis of metabonomics da
 - Benoît Legat <benoit.legat@gmail.com>
 
 ## Container Contributors
-- Kristian Peters <kpeters@ipb-halle.de>, IPB-Halle
+- [Kristian Peters](https://github.com/korseby) (IPB-Halle)
 
 ## Website
 https://github.com/ManonMartin/SOAP-NMR
 
+## Installation 
+
+For local individual installation:
+
+```bash
+docker pull docker-registry.phenomenal-h2020.eu/phnmnl/soap-nmr
+```
+
+## Usage Instructions
+
+For direct docker usage:
+
+```bash
+docker run docker-registry.phenomenal-h2020.eu/phnmnl/soap-nmr ...
+```
