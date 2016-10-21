@@ -45,20 +45,20 @@ This package provides R functions for common pre-treatment steps that are applie
 
 ## Key features
 This package has the following functions:
-* `FirstOrderPhaseCorrection`: Correct for the first order phase correction.
-* `SolventSuppression`: Remove solvent signal from the FID.
-* `Apodization`: Increase the Signal-to-Noise ratio of the FID.
-* `FourierTransform`: Transform the FID into a spectrum.
-* `ZeroOrderPhaseCorrection`: Correct for the zero order phase correction.
-* `BaselineCorrection`: Remove the spectral baseline.
-* `NegativeValuesZeroing`: Set negatives values to 0.
-* `PPMConversion`: Convert the frequency scale (Hertz -> ppm).
-* `Warping`: Warp the samples according to a reference spectrum.
-* `WindowSelection`: Select the informative part of the spectrum.
-* `Bucketing`: Proceed to data reduction.
-* `RegionRemoval`: Set a desired region to 0.
-* `ZoneAggregation`: Aggregate a region to a single peak.
-* `Normalization`: Normalize the spectra.
+- `FirstOrderPhaseCorrection`: Correct for the first order phase correction.
+- `SolventSuppression`: Remove solvent signal from the FID.
+- `Apodization`: Increase the Signal-to-Noise ratio of the FID.
+- `FourierTransform`: Transform the FID into a spectrum.
+- `ZeroOrderPhaseCorrection`: Correct for the zero order phase correction.
+- `BaselineCorrection`: Remove the spectral baseline.
+- `NegativeValuesZeroing`: Set negatives values to 0.
+- `PPMConversion`: Convert the frequency scale (Hertz -> ppm).
+- `Warping`: Warp the samples according to a reference spectrum.
+- `WindowSelection`: Select the informative part of the spectrum.
+- `Bucketing`: Proceed to data reduction.
+- `RegionRemoval`: Set a desired region to 0.
+- `ZoneAggregation`: Aggregate a region to a single peak.
+- `Normalization`: Normalize the spectra.
 
 ## Tool Authors 
 - Benoît Legat <benoit.legat@gmail.com>
@@ -86,4 +86,4 @@ docker run docker-registry.phenomenal-h2020.eu/phnmnl/soap-nmr ...
 ```
 
 ## Publications
-Rousseau, R. (2011). Statistical contribution to the analysis of metabonomics data in 1H NMR spectroscopy (Doctoral dissertation, PhD thesis. Institut de statistique, biostatistique et sciences actuarielles, Université catholique de Louvain, Belgium).
+- Rousseau, R. (2011). Statistical contribution to the analysis of metabonomics data in 1H NMR spectroscopy (Doctoral dissertation, PhD thesis. Institut de statistique, biostatistique et sciences actuarielles, Université catholique de Louvain, Belgium).
