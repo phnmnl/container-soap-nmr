@@ -44,21 +44,21 @@ An R package for 1H-NMR data pre-treatment.
 This package provides R functions for common pre-treatment steps that are applied on 1H-NMR data. It also provides the function ReadFids to read the FID directly from the Bruker output.
 
 ## Key features
-This package has the following functions:
-- `FirstOrderPhaseCorrection`: Correct for the first order phase correction.
-- `SolventSuppression`: Remove solvent signal from the FID.
-- `Apodization`: Increase the Signal-to-Noise ratio of the FID.
-- `FourierTransform`: Transform the FID into a spectrum.
-- `ZeroOrderPhaseCorrection`: Correct for the zero order phase correction.
-- `BaselineCorrection`: Remove the spectral baseline.
-- `NegativeValuesZeroing`: Set negatives values to 0.
-- `PPMConversion`: Convert the frequency scale (Hertz -> ppm).
-- `Warping`: Warp the samples according to a reference spectrum.
-- `WindowSelection`: Select the informative part of the spectrum.
-- `Bucketing`: Proceed to data reduction.
-- `RegionRemoval`: Set a desired region to 0.
-- `ZoneAggregation`: Aggregate a region to a single peak.
-- `Normalization`: Normalize the spectra.
+
+- FirstOrderPhaseCorrection: Correct for the first order phase correction.
+- SolventSuppression: Remove solvent signal from the FID.
+- Apodization: Increase the Signal-to-Noise ratio of the FID.
+- FourierTransform: Transform the FID into a spectrum.
+- ZeroOrderPhaseCorrection: Correct for the zero order phase correction.
+- BaselineCorrection: Remove the spectral baseline.
+- NegativeValuesZeroing: Set negatives values to 0.
+- PPMConversion: Convert the frequency scale (Hertz -> ppm).
+- Warping: Warp the samples according to a reference spectrum.
+- WindowSelection: Select the informative part of the spectrum.
+- Bucketing: Proceed to data reduction.
+- RegionRemoval: Set a desired region to 0.
+- ZoneAggregation: Aggregate a region to a single peak.
+- Normalization: Normalize the spectra.
 
 ## Tool Authors 
 - Benoît Legat 
