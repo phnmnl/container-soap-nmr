@@ -60,9 +60,6 @@ This package has the following functions:
 * `ZoneAggregation`: Aggregate a region to a single peak.
 * `Normalization`: Normalize the spectra.
 
-## Publications
-Rousseau, R. (2011). Statistical contribution to the analysis of metabonomics data in 1H NMR spectroscopy (Doctoral dissertation, PhD thesis. Institut de statistique, biostatistique et sciences actuarielles, Université catholique de Louvain, Belgium).
-
 ## Tool Authors 
 - Benoît Legat <benoit.legat@gmail.com>
 
@@ -87,3 +84,6 @@ For direct docker usage:
 ```bash
 docker run docker-registry.phenomenal-h2020.eu/phnmnl/soap-nmr ...
 ```
+
+## Publications
+Rousseau, R. (2011). Statistical contribution to the analysis of metabonomics data in 1H NMR spectroscopy (Doctoral dissertation, PhD thesis. Institut de statistique, biostatistique et sciences actuarielles, Université catholique de Louvain, Belgium).
