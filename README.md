@@ -67,7 +67,7 @@ This package has the following functions:
 - [Kristian Peters](https://github.com/korseby) (IPB-Halle)
 
 ## Website
-https://github.com/ManonMartin/SOAP-NMR
+- https://github.com/ManonMartin/SOAP-NMR
 
 ## Installation 
 
