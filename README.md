@@ -61,7 +61,7 @@ This package has the following functions:
 - `Normalization`: Normalize the spectra.
 
 ## Tool Authors 
-- Benoît Legat <benoit.legat@gmail.com>
+- Benoît Legat 
 
 ## Container Contributors
 - [Kristian Peters](https://github.com/korseby) (IPB-Halle)
