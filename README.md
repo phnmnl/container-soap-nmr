@@ -37,6 +37,7 @@ For screenshots, you should use the following scheme:
 # SOAP-NMR
 
 ## Short description
+
 An R package for 1H-NMR data pre-treatment.
 
 ## Description
@@ -60,13 +61,22 @@ This package provides R functions for common pre-treatment steps that are applie
 - ZoneAggregation: Aggregate a region to a single peak.
 - Normalization: Normalize the spectra.
 
+## Instrument Data Types
+
+- NMR / 1D NMR
+- NMR / 2D NMR / 2D TOCSY
+- NMR / 1H NMR
+
 ## Tool Authors 
+
 - Benoît Legat 
 
 ## Container Contributors
+
 - [Kristian Peters](https://github.com/korseby) (IPB-Halle)
 
 ## Website
+
 - https://github.com/ManonMartin/SOAP-NMR
 
 ## Installation 
@@ -86,4 +96,5 @@ docker run docker-registry.phenomenal-h2020.eu/phnmnl/soap-nmr ...
 ```
 
 ## Publications
+
 - Rousseau, R. (2011). Statistical contribution to the analysis of metabonomics data in 1H NMR spectroscopy (Doctoral dissertation, PhD thesis. Institut de statistique, biostatistique et sciences actuarielles, Université catholique de Louvain, Belgium).
