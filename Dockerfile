@@ -1,13 +1,14 @@
+FROM container-registry.phenomenal-h2020.eu/phnmnl/ipo
+
 LABEL software=soap-nmr
 LABEL software.version=1.0
 LABEL version=0.1
+
 LABEL Description="An R package for 1H-NMR data pre-treatment."
 
 MAINTAINER PhenoMeNal-H2020 Project <phenomenal-h2020-users@googlegroups.com>
 
 
-
-FROM container-registry.phenomenal-h2020.eu/phnmnl/ipo
 
 # Install dependencies
 RUN apt-get -y update
