@@ -1,2 +1,2 @@
-R -e "require(SOAP)"
+test -d /usr/src/SOAP-NMR
 
