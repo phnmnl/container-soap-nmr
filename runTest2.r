@@ -46,7 +46,7 @@ peakList <- detectSpecPeaks(aligned_dataset,
 );
 resFindRef<- findRef(peakList);
 refInd <- resFindRef$refInd;
-maxShift = round(-0.025/mean(diff(as.numeric(colnames(pre_processed_dataset)))));
+maxShift = round(0.025/mean(diff(as.numeric(colnames(pre_processed_dataset)))));
 aligned_dataset <- dohCluster(aligned_dataset,
   peakList = peakList,
   refInd = refInd,
