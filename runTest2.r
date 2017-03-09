@@ -16,20 +16,17 @@ initial_dataset=fread(dataset_path,header=F,sep=',')
 ppm_path="/data/test_data_ppm.csv"
 ppm=fread(ppm_path,header=F,sep=',')
 
-# Path of folder created with Python script with Bruker-processed spectra
-bruker_path="/data/MTBLS1"
+# fid info read with nmrglue (CSV format)
+fid_info_path="/data/test_fid_info.csv"
+fid_info=as.matrix(fread(fid_info_path,header=F,sep=','))
+colnames(fid_info)=c("TD",      "BYTORDA" ,"DIGMOD",  "DECIM",   "DSPFVS" , "SW_h" ,   "SW"  ,    "O1" ,     "DT"   ) 
 
 #Adaptation of dataset to SOAP structure
 initial_dataset=t(apply(initial_dataset,1,as.complex))
 attributes(initial_dataset)$dimnames[[2]]=as.vector(t(ppm))
 
-#The function InternalReferencing needs the 'FIDInfo' variable
-fidList<-ReadFids(bruker_path,subdirs=T)
-Fid<-fidList[["Fid_data"]]
-Fidinfo<-fidList[["Fid_info"]]
-
 #Referencing to TSP
-pre_processed_dataset=InternalReferencing(initial_dataset,Fidinfo)
+pre_processed_dataset=InternalReferencing(initial_dataset,fid_info)
 #Selection of edges of the window of spectrum with valuable information
 pre_processed_dataset=WindowSelection ( pre_processed_dataset,from.ws = 0.2, to.ws = 9.3)
 #Removal of regions of spectrum with not useful information that can worsen later pre-procesing steps
@@ -49,7 +46,7 @@ peakList <- detectSpecPeaks(aligned_dataset,
 );
 resFindRef<- findRef(peakList);
 refInd <- resFindRef$refInd;
-maxShift = round(-0.025/mean(diff(as.numeric(colnames(pre_processed_dataset)))));
+maxShift = round(0.025/mean(diff(as.numeric(colnames(pre_processed_dataset)))));
 aligned_dataset <- dohCluster(aligned_dataset,
   peakList = peakList,
   refInd = refInd,
