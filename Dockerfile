@@ -17,6 +17,7 @@ RUN apt-get -y --no-install-recommends install git make gcc gfortran g++ libnetc
 # Install R dependencies
 RUN R -e 'source("https://bioconductor.org/biocLite.R"); biocLite("MassSpecWavelet")'
 RUN R -e 'install.packages(c("ptw","speaq","ggplot2","gridExtra","matrixStats","reshape2","data.table"), repos="https://mirrors.ebi.ac.uk/CRAN/")'
+RUN R -e 'source("https://bioconductor.org/biocLite.R"); biocLite("ropls")'
 
 # Install SOAP-NMR
 WORKDIR /usr/src
@@ -29,6 +30,9 @@ RUN apt-get -y --purge --auto-remove remove make gcc gfortran g++
 
 # Clean-up
 RUN apt-get -y clean && apt-get -y autoremove && rm -rf /var/lib/{cache,log}/ /tmp/* /var/tmp/*
+
+# Add R scripts
+ADD galaxy/*.r /usr/local/bin/
 
 # Define Entry point script
 RUN mkdir /data

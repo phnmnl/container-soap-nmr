@@ -1,22 +1,35 @@
 #!/usr/bin/env Rscript
 # Script for pre-processing and analysis of MTBLS1
-# Created by Daniel Canueto
 
+# Setup R error handling to go to stderr
+options(show.error.messages=F, error=function(){cat(geterrmessage(),file=stderr());q("no",1,F)})
+
+# Set proper locale
+loc <- Sys.setlocale("LC_MESSAGES", "en_US.UTF-8")
+
+# Import library
+#library(getopt)
+options(stringAsfactors = FALSE, useFancyQuotes = FALSE)
+
+# Take in trailing command line arguments
+args <- commandArgs(trailingOnly = TRUE)
+
+
+# Created by Daniel Canueto
 library(SOAP)
 library(data.table)
 library(speaq)
-#library(ropls)
 
 # dataset of Bruker-processed spectra read with nmrglue (CSV format)
-dataset_path="/data/test_data_spectra.csv"
+dataset_path=args[[1]]
 initial_dataset=fread(dataset_path,header=F,sep=',')
 
 # ppm axis for each bin of the dataset read with nmrglue (CSV format)
-ppm_path="/data/test_data_ppm.csv"
+ppm_path=args[[2]]
 ppm=fread(ppm_path,header=F,sep=',')
 
 # fid info read with nmrglue (CSV format)
-fid_info_path="/data/test_data_fid.csv"
+fid_info_path=args[[3]]
 fid_info=as.matrix(fread(fid_info_path,header=F,sep=','))
 colnames(fid_info)=c("TD",      "BYTORDA" ,"DIGMOD",  "DECIM",   "DSPFVS" , "SW_h" ,   "SW"  ,    "O1" ,     "DT"   ) 
 
@@ -59,8 +72,6 @@ aligned_dataset = Bucketing(aligned_dataset,width=T,m=0.01)
 #variable=rep(c(1,2),times=c(48,84))
 
 # Export data set used for OPLS
-# PLS_DA of dataset with eman centering and pareto scaling.
-#PLS_DA_data <- opls(aligned_dataset, variable,scaleC='pareto')
 aligned_dataset <- cbind(aligned_dataset, rep(c(1,2),times=c(48,84)))
-write.csv(aligned_dataset, file="data_set.csv", row.names=FALSE)
+write.csv(aligned_dataset, file=args[[4]], row.names=FALSE)
 
