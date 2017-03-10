@@ -72,6 +72,6 @@ aligned_dataset = Bucketing(aligned_dataset,width=T,m=0.01)
 #variable=rep(c(1,2),times=c(48,84))
 
 # Export data set used for OPLS
-aligned_dataset <- cbind(aligned_dataset, rep(c(1,2),times=c(48,84)))
+aligned_dataset <- rbind(aligned_dataset, rep(c(1,2),times=c(48,84)))
 write.csv(aligned_dataset, file=args[[4]], row.names=FALSE)
 
