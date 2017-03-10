@@ -20,14 +20,14 @@ library(ropls)
 aligned_dataset <- read.csv(args[[1]], stringsAsFactors=FALSE)
 
 # Prepare data set for OPLS
-grouping <- aligned_dataset[nrow(aligned_dataset)-1,]
-aligned_dataset <- aligned_dataset[-nrow(aligned_dataset),]
+grouping <- aligned_dataset[,ncol(aligned_dataset)]
+aligned_dataset <- aligned_dataset[,-ncol(aligned_dataset)]
 
 # OPLS with pareto scaling
 model_opls <- opls(x=aligned_dataset, y=grouping, scaleC='pareto')
 
 # Plot OPLS
-png(args[[2]])
-plot(x=model_opls, y=grouping, typeVc="summary", parCexN=0.5, parEllipsesL=TRUE, parTitleL=TRUE)
+pdf(args[[2]], encoding="ISOLatin1", pointsize=10, width=16, height=10, family="Helvetica")
+plot(x=model_opls, y=grouping, typeVc="summary", parCexN=0.8)
 dev.off()
 

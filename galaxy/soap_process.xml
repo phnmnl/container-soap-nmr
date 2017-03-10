@@ -11,9 +11,9 @@
     soap_process.r $spectrafile $ppmfile $fidfile $outfile 2>&1
   ]]></command>
   <inputs>
-    <param name="spectrafile" format="csv" optional="False" label="Input NMR spectra CSV file." />
-    <param name="ppmfile" format="csv" optional="False" label="Input NMR PPM CSV file." />
-    <param name="fidfile" format="csv" optional="False" label="Input NMR FID CSV file." />
+    <param name="spectrafile" type="data" format="csv" optional="False" label="Input NMR spectra CSV file." />
+    <param name="ppmfile" type="data" format="csv" optional="False" label="Input NMR PPM CSV file." />
+    <param name="fidfile" type="data" format="csv" optional="False" label="Input NMR FID CSV file." />
   </inputs>
   <outputs>
     <data name="outfile" format="csv" label="Dataset Matrix used for statistics." />
