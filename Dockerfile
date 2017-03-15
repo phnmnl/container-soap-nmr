@@ -2,7 +2,7 @@ FROM container-registry.phenomenal-h2020.eu/phnmnl/rbase
 
 LABEL software=soap-nmr
 LABEL software.version=1.0
-LABEL version=0.2
+LABEL version=0.4
 
 LABEL Description="An R package for 1H-NMR data pre-treatment."
 
@@ -32,7 +32,8 @@ RUN apt-get -y --purge --auto-remove remove make gcc gfortran g++
 RUN apt-get -y clean && apt-get -y autoremove && rm -rf /var/lib/{cache,log}/ /tmp/* /var/tmp/*
 
 # Add R scripts
-ADD galaxy/*.r /usr/local/bin/
+ADD scripts/*.r /usr/local/bin/
+RUN chmod +x /usr/local/bin/*.r
 
 # Define Entry point script
 RUN mkdir /data
