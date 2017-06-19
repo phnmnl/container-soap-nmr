@@ -1,4 +1,8 @@
 #!/bin/bash
+
+mkdir -p /data
+cd /data
+
 # Fetch test data
 apt-get -y install wget
 wget 'https://raw.githubusercontent.com/phnmnl/container-nmrglue/develop/test_data_spectra.csv.gz'
@@ -18,6 +22,8 @@ gunzip test_data_fid.csv.gz
 #cd ..
 
 # Run test
+wget -O /data/runTest2.r 'https://raw.githubusercontent.com/phnmnl/container-soap-nmr/develop/runTest2.r'
+chmod 755 /data/runTest2.r
 /data/runTest2.r
 
 # Compare results
