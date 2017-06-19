@@ -33,7 +33,8 @@ RUN apt-get -y clean && apt-get -y autoremove && rm -rf /var/lib/{cache,log}/ /t
 
 # Add R scripts
 ADD scripts/*.r /usr/local/bin/
-RUN chmod +x /usr/local/bin/*.r
+ADD runTest*.* /usr/local/bin/
+RUN chmod +x /usr/local/bin/*
 
 # Define Entry point script
 RUN mkdir /data
