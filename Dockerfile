@@ -23,7 +23,6 @@ RUN R -e 'source("https://bioconductor.org/biocLite.R"); biocLite("ropls")'
 WORKDIR /usr/src
 RUN git clone https://github.com/ManonMartin/SOAP-NMR
 RUN R -e 'install.packages("/usr/src/SOAP-NMR", repos=NULL, type="source")'
-RUN R -e 'require(SOAP)'
 
 # De-install not needed packages
 RUN apt-get -y --purge --auto-remove remove make gcc gfortran g++
