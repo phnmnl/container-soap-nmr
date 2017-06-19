@@ -2,7 +2,7 @@
 # Script for pre-processing and analysis of MTBLS1
 # Created by Daniel Canueto
 
-library(SOAP)
+library(PepsNMR)
 library(data.table)
 library(speaq)
 #library(ropls)
