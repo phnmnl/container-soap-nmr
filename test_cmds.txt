@@ -1,1 +1,1 @@
-R -e 'require(SOAP)'
+R -e 'library(PepsNMR)'
