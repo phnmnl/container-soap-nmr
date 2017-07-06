@@ -1,4 +1,4 @@
-FROM container-registry.phenomenal-h2020.eu/phnmnl/rbase
+FROM container-registry.phenomenal-h2020.eu/phnmnl/rbase:v3.4.1-1xenial0_cv0.2.12
 
 LABEL software=soap-nmr
 LABEL software.version=1.0
