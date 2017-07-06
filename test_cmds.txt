@@ -1,1 +1,1 @@
-test -d /usr/src/SOAP-NMR
+R -e 'library(PepsNMR)'
